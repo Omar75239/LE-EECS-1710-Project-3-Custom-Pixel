@@ -4,17 +4,18 @@
 
 PImage mainimage;
 ArrayList<Dot> dots;
-int scaler = 6;
+int scale = 6;
 color boxColor = color (255);
 
 void setup() {
-  size(800, 600, P2D);  
+  size(800, 600, P2D);
+  background(0);
   mainimage = loadImage("mountain.jpg");
   surface.setSize(mainimage.width, mainimage.height);
   mainimage.loadPixels();
   dots = new ArrayList<Dot>();
-  for (int x = 0; x < mainimage.width; x += scaler) {
-    for (int y = 0; y < mainimage.height; y += scaler) {
+  for (int x = 0; x < mainimage.width; x += scale) {
+    for (int y = 0; y < mainimage.height; y += scale) {
       int loc = x + y * (mainimage.width);
       
       dots.add(new Dot(x, y, mainimage.pixels[loc]));
@@ -23,7 +24,6 @@ void setup() {
 }
 
 void draw() { 
-  background(0);
   fill(boxColor);
   noStroke();
   rect(40, 40, 8, 8);
