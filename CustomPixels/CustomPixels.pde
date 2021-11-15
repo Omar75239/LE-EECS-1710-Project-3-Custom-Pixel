@@ -1,4 +1,4 @@
-//Thing to know:
+//Things to know:
 //Image will break into hundreds of dots
 //Moving the mouse cursor will change the color of the small cubes that are spread out on the screen
 
